@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script>
+      window.inst = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%");
+    </script>
+  </head>
+  <body>
+    <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
+
+    <form onsubmit="alert('TODO send msg to unity')">
+      <input type="button" value="Fullscreen" onclick="inst.SetFullscreen(true)"/>
+      <input type="button" value="Exit Fullscreen" onclick="inst.SetFullscreen(false)"/>
+      <input type="text" name="msg"/>
+      <input type="submit" value="Send"/>
+
+    </form>
+  </body>
+</html>
